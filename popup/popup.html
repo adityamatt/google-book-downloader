@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Google Books Downloader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <span class="icon">📚</span>
+        <h1>Books Downloader</h1>
+      </header>
+
+      <div id="book-info" class="book-info hidden">
+        <div class="label">Book ID</div>
+        <div id="book-id" class="value mono">—</div>
+        <div class="label">Pages</div>
+        <div id="page-count" class="value">—</div>
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <div id="progress-container" class="progress-container hidden">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div id="progress-text" class="progress-text"></div>
+      </div>
+
+      <div class="actions">
+        <button id="download-btn" class="btn btn-primary" disabled>
+          Download PDF
+        </button>
+        <button id="save-btn" class="btn btn-primary hidden">
+          Save PDF
+        </button>
+        <button id="reset-btn" class="btn btn-secondary hidden">
+          Start New
+        </button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

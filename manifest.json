@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Google Books Downloader",
+  "version": "1.0.0",
+  "description": "Download Google News Archive newspapers as PDF by reverse-engineering the tile layout.",
+  "permissions": ["activeTab", "tabs", "storage"],
+  "host_permissions": [
+    "*://news.google.com/*",
+    "*://books.google.com/*",
+    "*://books.google.lu/*",
+    "*://books.google.co.uk/*",
+    "*://books.google.co.in/*",
+    "*://books.google.de/*",
+    "*://books.google.fr/*",
+    "*://books.google.com.au/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Download as PDF",
+    "default_icon": {
+      "16": "icons/icon16_grey.png",
+      "48": "icons/icon48_grey.png",
+      "128": "icons/icon128_grey.png"
+    }
+  }
+}
